@@ -1,0 +1,24 @@
+import React, { Component }from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import PCApp from './PCApp';
+import registerServiceWorker from './registerServiceWorker';
+import MediaQuery from 'react-responsive';
+import MebileApp from './mobileApp';
+ class Root extends Component {
+    render() {
+      return (
+        <div>
+            <MediaQuery query='(min-device-width:1224px)'>
+                <PCApp/>
+            </MediaQuery>
+            <MediaQuery query='(max-device-width:1224px)'>
+                <MebileApp/>
+            </MediaQuery>
+        </div>
+      );
+    }
+  };
+
+ReactDOM.render(<Root/>, document.getElementById('root'));
+registerServiceWorker();

@@ -1,0 +1,12 @@
+import React, { Component } from 'react';
+import MobileHeader from './component/mobile_header';
+import './mobileApp.css';
+class MobileApp extends Component {
+    render() {
+        return (
+              <MobileHeader></MobileHeader>
+        );
+    }
+}
+
+export default MobileApp;
